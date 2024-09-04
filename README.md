@@ -1,8 +1,8 @@
 # shardingsphere-agent-master-test
 
-- For todo issue.
+- For https://github.com/apache/shardingsphere/issues/32793 .
 
-- Execute the following commands on Ubuntu 22.04.4 WSL with Docker Engine and SDKMAN! installed.
+- Execute the following commands on Ubuntu 22.04.4 WSL with `Docker Engine` and `SDKMAN!` installed.
 - The Jaeger UI is at `http://localhost:16686/`, and the ingestion backend that accepts data over the OpenTelemetry
   protocol over GRPC is at `http://localhost:4317`.
 
