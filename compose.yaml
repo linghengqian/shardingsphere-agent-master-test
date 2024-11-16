@@ -1,11 +1,20 @@
 services:
   jaeger:
-    image: jaegertracing/all-in-one:1.62.0
-    environment:
-      COLLECTOR_ZIPKIN_HOST_PORT: ":9411"
+    image: jaegertracing/jaeger:2.0.0
+    command:
+      - "--set=receivers.otlp.protocols.http.endpoint=0.0.0.0:4318"
+      - "--set=receivers.otlp.protocols.grpc.endpoint=0.0.0.0:4317"
+    ports:
+      - "16686:16686"
   shardingsphere-agent-master-test:
+    image: linghengqian/shardingsphere-agent-master-test:latest
+    pull_policy: build
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile_inline: |
+        FROM ghcr.io/apache/shardingsphere-agent:latest
+        COPY ./target/*.jar /app.jar
+        COPY ./custom-agent.yaml /usr/agent/conf/agent.yaml
+        ENTRYPOINT ["java","-javaagent:/usr/agent/shardingsphere-agent.jar","-jar","/app.jar"]
     depends_on:
       - jaeger

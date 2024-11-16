@@ -4,3 +4,4 @@ plugins:
       props:
         otel.service.name: "shardingsphere-agent-master-test"
         otel.exporter.otlp.traces.endpoint: "http://jaeger:4317"
+        otel.metrics.exporter: "none"
