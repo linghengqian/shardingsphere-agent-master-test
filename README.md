@@ -28,16 +28,15 @@ docker compose logs --follow shardingsphere-agent-master-test
 - The error log is as follows.
 
 ```shell
-lingh@DESKTOP-58BHAE6:~/TwinklingLiftWorks/git/public/shardingsphere-agent-master-test$ docker compose logs --follow shardingsphere-agent-master-test
-shardingsphere-agent-master-test-1  | Jan 06, 2026 8:17:52 AM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
+shardingsphere-agent-master-test-1  | Jan 07, 2026 3:13:01 PM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
 shardingsphere-agent-master-test-1  | INFO: Loaded jar: shardingsphere-agent-logging-file-5.5.3-SNAPSHOT.jar
-shardingsphere-agent-master-test-1  | Jan 06, 2026 8:17:52 AM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
+shardingsphere-agent-master-test-1  | Jan 07, 2026 3:13:01 PM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
 shardingsphere-agent-master-test-1  | INFO: Loaded jar: shardingsphere-agent-plugin-core-5.5.3-SNAPSHOT.jar
-shardingsphere-agent-master-test-1  | Jan 06, 2026 8:17:52 AM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
+shardingsphere-agent-master-test-1  | Jan 07, 2026 3:13:01 PM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
 shardingsphere-agent-master-test-1  | INFO: Loaded jar: shardingsphere-agent-metrics-core-5.5.3-SNAPSHOT.jar
-shardingsphere-agent-master-test-1  | Jan 06, 2026 8:17:52 AM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
+shardingsphere-agent-master-test-1  | Jan 07, 2026 3:13:01 PM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
 shardingsphere-agent-master-test-1  | INFO: Loaded jar: shardingsphere-agent-metrics-prometheus-5.5.3-SNAPSHOT.jar
-shardingsphere-agent-master-test-1  | Jan 06, 2026 8:17:52 AM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
+shardingsphere-agent-master-test-1  | Jan 07, 2026 3:13:01 PM org.apache.shardingsphere.agent.core.plugin.jar.PluginJarLoader load
 shardingsphere-agent-master-test-1  | INFO: Loaded jar: shardingsphere-agent-tracing-opentelemetry-5.5.3-SNAPSHOT.jar
 shardingsphere-agent-master-test-1  | WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 shardingsphere-agent-master-test-1  | WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.apache.shardingsphere.shade.net.bytebuddy.dynamic.loading.ClassInjector$UsingUnsafe$Dispatcher$CreationAction (file:/usr/agent/shardingsphere-agent.jar)
@@ -53,22 +52,22 @@ shardingsphere-agent-master-test-1  |  =========|_|==============|___/=/_/_/_/
 shardingsphere-agent-master-test-1  | 
 shardingsphere-agent-master-test-1  |  :: Spring Boot ::                (v4.0.1)
 shardingsphere-agent-master-test-1  | 
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:54.538Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] ShardingsphereAgentMasterTestApplication : Starting ShardingsphereAgentMasterTestApplication v0.0.1-SNAPSHOT using Java 25.0.1 with PID 1 (/app.jar started by root in /)
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:54.543Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] ShardingsphereAgentMasterTestApplication : No active profile set, falling back to 1 default profile: "default"
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:56.292Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:56.308Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:56.309Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:56.341Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1469 ms
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:57.403Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:57.483Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:57.496Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] ShardingsphereAgentMasterTestApplication : Started ShardingsphereAgentMasterTestApplication in 3.601 seconds (process running for 4.888)
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:57.576Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:57.781Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:58.014Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn0: url=jdbc:h2:mem:local_sharding_ds_0 user=SA
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:58.017Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:59.267Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.a.s.d.j.c.d.ShardingSphereDataSource   : ShardingSphere-JDBC Standalone mode started successfully.
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:59.268Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.a.s.d.j.c.d.ShardingSphereDataSource   : Instance id: c852d5ae-7d87-4db5-af4b-c1a9c0c4aee6, IP: 172.18.0.3
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:59.281Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.apache.shardingsphere.driver.jdbc.core.connection.ShardingSphereConnection@6add8aac
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:59.283Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-shardingsphere-agent-master-test-1  | 2026-01-06T08:17:59.306Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] .a.s.a.c.p.PluginLifecycleServiceManager : Start plugin: OpenTelemetry
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:03.014Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] ShardingsphereAgentMasterTestApplication : Starting ShardingsphereAgentMasterTestApplication v0.0.1-SNAPSHOT using Java 25.0.1 with PID 1 (/app.jar started by root in /)
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:03.019Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] ShardingsphereAgentMasterTestApplication : No active profile set, falling back to 1 default profile: "default"
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:04.728Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:04.740Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:04.741Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:04.767Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1452 ms
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:05.651Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:05.717Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:05.731Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] ShardingsphereAgentMasterTestApplication : Started ShardingsphereAgentMasterTestApplication in 3.3 seconds (process running for 4.539)
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:05.814Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:05.997Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:06.176Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn0: url=jdbc:h2:mem:local_sharding_ds_0 user=SA
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:06.178Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:07.390Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.a.s.d.j.c.d.ShardingSphereDataSource   : ShardingSphere-JDBC Standalone mode started successfully.
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:07.390Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] o.a.s.d.j.c.d.ShardingSphereDataSource   : Instance id: 8891597e-501d-4f30-b0bc-d5b80f5eda63, IP: 172.19.0.3
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:07.407Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.apache.shardingsphere.driver.jdbc.core.connection.ShardingSphereConnection@64a0ee65
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:07.410Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+shardingsphere-agent-master-test-1  | 2026-01-07T15:13:07.436Z  INFO 1 --- [shardingsphere-agent-master-test] [           main] .a.s.a.c.p.PluginLifecycleServiceManager : Start plugin: OpenTelemetry
 ```
