@@ -17,7 +17,6 @@ cd ../
 
 git clone git@github.com:linghengqian/shardingsphere-agent-master-test.git
 cd ./shardingsphere-agent-master-test/
-./mvnw clean package -T1C -DskipTests
 docker compose up -d
 docker compose logs --follow shardingsphere-agent-master-test
 ```

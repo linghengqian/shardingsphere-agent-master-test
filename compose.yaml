@@ -11,6 +11,11 @@ services:
     build:
       context: .
       dockerfile_inline: |
+        FROM eclipse-temurin:25.0.1_8-jdk AS jitbuild
+        WORKDIR /build
+        COPY ./ .
+        RUN --mount=type=cache,target=/root/.m2 ./mvnw clean package -T1C -DskipTests
+
         FROM ghcr.io/apache/shardingsphere-agent:latest
         COPY ./target/*.jar /app.jar
         COPY ./custom-agent.yaml /usr/agent/conf/agent.yaml
