@@ -1,0 +1,24 @@
+services:
+  zipkin:
+    image: ghcr.io/openzipkin-contrib/zipkin-otel:0.2.0
+    environment:
+      SELF_TRACING_ENABLED: true
+    ports:
+      - "9411:9411"
+  shardingsphere-agent-master-test:
+    image: linghengqian/shardingsphere-agent-master-test:latest
+    pull_policy: build
+    build:
+      context: .
+      dockerfile_inline: |
+        FROM maven:3.9.12-eclipse-temurin-25-noble AS jitbuild
+        WORKDIR /build
+        COPY ./ .
+        RUN --mount=type=cache,target=/root/.m2 mvn clean package -T1C -DskipTests
+
+        FROM ghcr.io/apache/shardingsphere-agent:latest
+        COPY ./target/*.jar /app.jar
+        COPY ./custom-agent-zipkin.yaml /usr/agent/conf/agent.yaml
+        ENTRYPOINT ["java","-javaagent:/usr/agent/shardingsphere-agent.jar","-jar","/app.jar"]
+    depends_on:
+      - zipkin

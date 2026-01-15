@@ -3,5 +3,6 @@ plugins:
     OpenTelemetry:
       props:
         otel.resource.attributes: "service.name=shardingsphere-agent-master-test"
-        otel.exporter.otlp.endpoint: "http://jaeger:4317"
+        otel.exporter.otlp.endpoint: "http://zipkin:9411"
+        otel.exporter.otlp.protocol: "http/protobuf"
         otel.metrics.exporter: "none"
