@@ -1,8 +1,6 @@
 services:
   zipkin:
     image: ghcr.io/openzipkin-contrib/zipkin-otel:0.2.0
-    environment:
-      SELF_TRACING_ENABLED: true
     ports:
       - "9411:9411"
   shardingsphere-agent-master-test:
